@@ -1,30 +1,16 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-  outputs = {nixpkgs, ...}: let
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
-  in {
-    devShells.${system}.default = pkgs.mkShell {
-      packages = [
-        pkgs.dart-sass
-      ];
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs?ref=nixos-unstable";
+  outputs = {nixpkgs, ...}: {
+    devShells.x86_64-linux = let
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    in {
+      default = pkgs.mkShell {packages = [pkgs.dart-sass];};
     };
-    packages.${system} = {
-      gtk = pkgs.stdenvNoCC.mkDerivation {
-        pname = "phocus-gtk-mountain";
-        version = "1";
-        src = ./gtk;
-        buildInputs = [pkgs.dart-sass];
-        buildPhase = ''
-          dart-sass ./scss:./
-        '';
-        installPhase = ''
-          mkdir -p $out/share/themes/phocus-mountain
-          cp -r gtk-3.0 $out/share/themes/phocus-mountain/
-          cp -r assets $out/share/themes/phocus-mountain/
-          cp index.theme $out/share/themes/phocus-mountain/
-        '';
-      };
+    packages.x86_64-linux = let
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
+    in {
+      gtk = pkgs.callPackage ./gtk {};
+
       nvim = pkgs.vimUtils.buildVimPlugin {
         name = "mountain-nvim";
         src = ./nvim;
