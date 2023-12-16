@@ -1,0 +1,39 @@
+$surface-strongest: rgb(25, 25, 25);
+$surface-strong: rgb(38, 38, 38);
+$surface-moderate: rgb(57, 57, 57);
+$surface-weak: rgb(76, 76, 76);
+$surface-weakest: rgb(118, 118, 118);
+
+$white-strongest: rgb(240, 240, 240);
+$white-strong: rgba(240, 240, 240, 0.87);
+$white-moderate: rgba(240, 240, 240, 0.34);
+$white-weak: rgba(240, 240, 240, 0.14);
+$white-weakest: rgba(240, 240, 240, 0.06);
+
+$black-strongest: rgb(15, 15, 15);
+$black-strong: rgba(15, 15, 15, 0.87);
+$black-moderate: rgba(15, 15, 15, 0.42);
+$black-weak: rgba(15, 15, 15, 0.15);
+$black-weakest: rgba(15, 15, 15, 0.06);
+
+$purple-light: rgb(163, 158, 196);
+$pink-light: rgb(196, 158, 196);
+$red-light: rgb(196, 158, 160);
+$orange-light: rgb(206, 177, 136);
+$yellow-light: rgb(196, 193, 158);
+$green-light: rgb(158, 196, 159);
+$cyan-light: rgb(158, 195, 196);
+$blue-light: rgb(165, 180, 203);
+
+$purple-normal: rgb(143, 138, 172);
+$pink-normal: rgb(172, 138, 172);
+$red-normal: rgb(172, 138, 140);
+$orange-normal: rgb(198, 166, 121);
+$yellow-normal: rgb(172, 169, 138);
+$green-normal: rgb(138, 172, 139);
+$cyan-normal: rgb(138, 172, 171);
+$blue-normal: rgb(138, 152, 172);
+
+$accent-primary: $purple-normal;
+$accent-secondary: $pink-normal;
+@define-color borders #{"" + $surface-strong};
