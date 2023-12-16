@@ -12,8 +12,6 @@ stdenvNoCC.mkDerivation {
   '';
   installPhase = ''
     mkdir -p $out/share/themes/phocus-mountain
-    cp -r gtk-3.0 $out/share/themes/phocus-mountain/
-    cp -r assets $out/share/themes/phocus-mountain/
-    cp index.theme $out/share/themes/phocus-mountain/
+    cp -r gtk-3.0 assets gtk-2.0 index.theme $out/share/themes/phocus-mountain/
   '';
 }
