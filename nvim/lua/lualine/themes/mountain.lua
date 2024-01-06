@@ -25,7 +25,6 @@ return {
 		y = {fg = colors.yuki, bg = colors.amagumo},
 		z = {fg = colors.yoru, bg = colors.sakura},
 	},
-
 	insert = {
 		a = {fg = colors.yoru, bg = colors.sora, gui = 'bold'},
 		b = {fg = colors.yuki, bg = colors.amagumo},
@@ -34,7 +33,6 @@ return {
 		y = {fg = colors.yuki, bg = colors.amagumo},
 		z = {fg = colors.yoru, bg = colors.sora},
 	},
-
 	visual = {
 		a = {fg = colors.yoru, bg = colors.ajisai, gui = 'bold'},
 		b = {fg = colors.yuki, bg = colors.amagumo},
@@ -43,7 +41,6 @@ return {
 		y = {fg = colors.yuki, bg = colors.amagumo},
 		z = {fg = colors.yoru, bg = colors.ajisai},
 	},
-
 	replace = {
 		a = {fg = colors.yoru, bg = colors.ichigo, gui = 'bold'},
 		b = {fg = colors.yuki, bg = colors.amagumo},
@@ -52,7 +49,6 @@ return {
 		y = {fg = colors.yuki, bg = colors.amagumo},
 		z = {fg = colors.yoru, bg = colors.ichigo},
 	},
-
 	inactive = {
 		a = {fg = colors.yuki, bg = colors.amagumo, gui = 'bold'},
 		b = {fg = colors.yuki, bg = colors.amagumo},
